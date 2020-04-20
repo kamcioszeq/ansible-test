@@ -7,12 +7,12 @@
   tasks:
   - name: Add epel-release repo
     yum:
-      name: curl
+      name: vim
       state: present
 
   - name: Install nginx
     yum:
-      name: nginx
+      name: curl
       state: present
 
   - name: Insert Index Page
@@ -20,7 +20,5 @@
       src: index.html
       dest: /usr/share/nginx/html/index.html
 
-  - name: Start NGiNX
-    service:
-      name: nginx
-      state: started
+  - name: run this command and ignore the result
+    shell: /usr/bin/env
